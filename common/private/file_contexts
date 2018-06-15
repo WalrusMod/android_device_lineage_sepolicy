@@ -22,3 +22,8 @@
 /sys/devices/virtual/timed_output/vibrator/vtg_level u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_min u:object_r:sysfs_vibrator:s0
 /sys/devices/virtual/timed_output/vibrator/vtg_max u:object_r:sysfs_vibrator:s0
+
+# sshd
+/system/bin/start-ssh     u:object_r:sshd_init_exec:s0
+/system/bin/sshd          u:object_r:sshd_exec:s0
+/data/ssh(/.*)?           u:object_r:sshd_data:s0
